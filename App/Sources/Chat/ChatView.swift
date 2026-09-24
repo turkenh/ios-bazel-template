@@ -59,7 +59,7 @@ struct ChatView: View {
         }
         ToolbarItem(placement: .principal) {
             HStack(spacing: 5) {
-                Text("Limrun Chat")
+                Text("Hello from Claude")
                     .font(DS.titleFont)
                     .foregroundStyle(DS.textPrimary)
                 Image(systemName: "chevron.down")

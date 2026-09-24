@@ -12,7 +12,7 @@ struct MessageBubble: View {
                 Spacer(minLength: 60)
                 Text(message.text)
                     .font(DS.messageFont)
-                    .foregroundStyle(DS.textPrimary)
+                    .foregroundStyle(DS.userBubbleText)
                     .padding(.horizontal, 14)
                     .padding(.vertical, 10)
                     .background(
