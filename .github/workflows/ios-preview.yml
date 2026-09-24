@@ -1,0 +1,27 @@
+name: iOS Preview
+
+# Builds the app on Limrun RBE for every PR push and posts a preview link as a
+# PR comment, via the packaged action (which also cleans up the Xcode instance
+# in its post step and the PR comment when the PR closes).
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: ios-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: limrun-inc/ios-preview-action@main
+        with:
+          api-key: ${{ secrets.LIM_API_KEY }}
