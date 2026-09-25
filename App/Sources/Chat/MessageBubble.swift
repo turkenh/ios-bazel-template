@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Asymmetric turns, the single biggest "real ChatGPT" tell:
-/// user = right-aligned gray bubble; assistant = full-width plain text, no bubble.
+/// user = right-aligned orange bubble; assistant = full-width plain text, no bubble.
 struct MessageBubble: View {
     let message: Message
 
@@ -12,7 +12,7 @@ struct MessageBubble: View {
                 Spacer(minLength: 60)
                 Text(message.text)
                     .font(DS.messageFont)
-                    .foregroundStyle(DS.textPrimary)
+                    .foregroundStyle(DS.userBubbleText)
                     .padding(.horizontal, 14)
                     .padding(.vertical, 10)
                     .background(

@@ -6,6 +6,7 @@ enum DS {
     // Colors (asset Color Sets carry both light and dark appearances)
     static let bgPrimary = Color("bgPrimary")
     static let userBubble = Color("userBubble")
+    static let userBubbleText = Color("userBubbleText")
     static let bgComposer = Color("bgComposer")
     static let textPrimary = Color("textPrimary")
     static let textSecondary = Color("textSecondary")
